@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import '../styles/repositories.scss'
 import { RepositoryItem } from './RepositoryItem'
 
+import '../styles/repositories.scss'
+import logoImg from '../assets/logo.svg';
 
 
 export function RepositoryList() {
@@ -16,6 +17,10 @@ export function RepositoryList() {
 		}, [repositories])
 
 		return (
+			<>
+			<header className={"repository-header"}>
+				<img src={logoImg} alt="Github Explorer" />
+			</header>
 			<section className="repository-list">
 				<h1>Lista de Repositórios </h1>
 				<ul>
@@ -23,8 +28,8 @@ export function RepositoryList() {
 					<RepositoryItem key={repository.name}repository={repository} />
 				))}
 				</ul>
-				
 			</section>
+			</>
 		)
 	
 }

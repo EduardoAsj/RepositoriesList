@@ -1,3 +1,22 @@
+header.repository-header {
+	margin: 48px;
+  
+	a {
+	  display: flex;
+	  align-items: center;
+	  text-decoration: none;
+	  color: #a8a8b3;
+	  transition: color 0.2s;
+  
+	  &:hover {
+		color: #665;
+	  }
+  
+	  svg {
+		margin-right: 4px;
+	  }
+	}
+}
 section.repository-list {
 	margin: 48px;
 
@@ -25,5 +44,4 @@ section.repository-list {
 			margin-top: 16px;
 		}
 	}
-	
 }
